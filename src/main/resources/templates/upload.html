@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Image Upload</title>
+</head>
+<body>
+    <h1>Image Upload Form</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data" modelAttribute="image">
+        <input type="file" name="file" accept="image/*">
+        <input type="text" name="name" placeholder="Image Name">
+        <button type="submit">Upload</button>
+    </form>
+    
+     <p>${message}</p>
+   
+    <a href="/images">View Uploaded Images</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Display Image</title>
+</head>
+<body>
+    <h1>Uploaded Image</h1>
+    <div th:if="${imageMap}">
+        <p>Name: <span th:text="${imageMap['name']}">Name Not Found</span></p>
+        <img th:src="${imageMap['imageUrl']}" alt="Uploaded Image" />
+    </div>
+    <div th:unless="${imageMap}">
+        <p>No image to display.</p>
+    </div>
+</body>
+</html>
