@@ -65,7 +65,6 @@ public class ImageUploadController {
 			Map<String, String> imageMap = new HashMap<>();
 			imageMap.put("name", image.getName());
 			imageMap.put("imageUrl", "data:image/png;base64," + Base64.getEncoder().encodeToString(image.getImage()));
-//			System.out.println("Image Map: " + imageMap);
 			model.addAttribute("imageMap", imageMap);
 		}
 
